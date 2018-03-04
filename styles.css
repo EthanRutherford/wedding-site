@@ -1,19 +1,63 @@
-body {
-	font-family: arial;
-	max-width: 1012px;
-	margin: 20px auto;
+* {
+	box-sizing: border-box;
 }
 
-h1 {
-	border-bottom: 1px solid #eaecef;
-    padding-bottom: 0.3em;
+.page {
+	display: flex;
+	height: 100%;
+	margin: 0;
+	color: white;
+	font-family: "Source Sans Pro";
 }
 
-a {
-	color: #0366d6;
+.sidebar {
+	padding: 40px;
+	width: 250px;
+	background-color: #1c3061;
+}
+
+.doodle {
+	width: 100px;
+}
+
+.nav-link {
+	display: block;
+	margin: 20px 0;
+	color: white;
 	text-decoration: none;
 }
 
-a:active {
-	filter: brightness(60%);
+.main-content {
+	flex-grow: 1;
+	position: relative;
+}
+
+.slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.content-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.title {
+	font-weight: normal;
+	font-family: 'Dancing Script', cursive;
+}
+
+@media only screen and (max-width: 599px) {
+	.sidebar {
+		width: 100px;
+		padding: 20px;
+	}
+
+	.doodle {
+		width: 60px;
+	}
 }
