@@ -9,7 +9,7 @@
 			<img class="doodle" src="./images/doodle.png" />
 			<a class="nav-link" href="/">Home</a>
 			<a class="nav-link" href="http://registry.rutherford.site">Registry</a>
-			<a class="nav-link" href="mailto:redquitobud@gmail.com">Contact</a>
+			<a class="nav-link" href="mailto:ethanrutherford2@gmail.com,redquitobud@gmail.com">Contact</a>
 		</div>
 		<div class="main-content">
 			<img class="slide" src="./images/title.jpg" />
@@ -23,5 +23,16 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			for (const slide of document.querySelectorAll(".slide")) {
+				if (slide.complete) {
+					slide.classList.add("loaded");
+				} else {
+					slide.onload = () => {
+						slide.classList.add("loaded");
+					};
+				}
+			}
+		</script>
 	</body>
 </html>
