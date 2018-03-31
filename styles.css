@@ -42,6 +42,12 @@
 	transition: opacity .5s ease-in-out;
 }
 
+.rsvp {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
 .loaded {
 	opacity: 1;
 }
