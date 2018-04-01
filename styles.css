@@ -11,10 +11,13 @@
 }
 
 .sidebar {
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	padding: 40px;
 	width: 250px;
 	background-color: #1c3061;
+	overflow: auto;
 }
 
 .doodle {
@@ -29,15 +32,13 @@
 }
 
 .social {
-	position: absolute;
-	bottom: 40px;
-	left: 40px;
-	right: 40px;
 	display: flex;
+	flex-shrink: 0;
 	flex-wrap: wrap;
 }
 
 .social-link {
+	margin-top: 4px;
 	margin-right: 4px;
 }
 
@@ -94,11 +95,5 @@
 
 	.doodle {
 		width: 60px;
-	}
-
-	.social {
-		bottom: 20px;
-		left: 16px;
-		right: 12px;
 	}
 }
