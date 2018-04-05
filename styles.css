@@ -14,6 +14,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	flex-shrink: 0;
 	padding: 40px;
 	width: 250px;
 	background-color: #1c3061;
@@ -28,6 +29,7 @@
 	display: block;
 	margin: 20px 0;
 	color: white;
+	font-size: 20px;
 	text-decoration: none;
 }
 
@@ -52,6 +54,8 @@
 	flex-grow: 1;
 	position: relative;
 	background-color: grey;
+	height: 100%;
+	overflow: auto;
 }
 
 .slide {
@@ -61,12 +65,6 @@
 	object-fit: cover;
 	opacity: 0;
 	transition: opacity .5s ease-in-out;
-}
-
-.rsvp {
-	border: none;
-	width: 100%;
-	height: 100%;
 }
 
 .loaded {
@@ -87,6 +85,97 @@
 	font-family: 'adage-script-jf', cursive;
 }
 
+.rsvp {
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+
+.header {
+	position: relative;
+	height: 60vh;
+}
+
+.header>.slide {
+	object-position: 50% 30%;
+}
+
+.header-overlay {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 33%;
+	background-color: rgb(0, 0, 0, .1);
+	box-shadow: 0px 0px 8px 4px rgb(0, 0, 0, .1);
+	border-radius: 20px;
+	min-width: 180px;
+	transform: translate(-50%, -50%);
+}
+
+.header-quote {
+	font: 22px 'adage-script-jf', cursive;
+	text-align: center;
+}
+
+.header-attribution {
+	margin-top: 20px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.story-container {
+	display: flex;
+	padding: 40px;
+	color: #1c3061;
+	background-color: white;
+}
+
+.story-lead-in {
+	flex-shrink: 0;
+	font-size: 40px;
+	width: 25%;
+	margin-right: 40px;
+}
+
+.our-story {
+	margin: 20px 0;
+	color: #6676B2;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.story {
+	columns: 2 auto;
+	column-gap: 40px;
+}
+
+.story>p {
+	margin: 0 0 1em;
+	font-size: 20px;
+	break-inside: avoid-column;
+}
+
+@media only screen and (max-width: 1199px) {
+	.story-lead-in {
+		font-size: 30px;
+	}
+
+	.story {
+		columns: 1 auto;
+	}
+}
+
+@media only screen and (max-width: 899px) {
+	.story-container {
+		display: block;
+	}
+
+	.story-lead-in {
+		width: auto;
+		margin-right: 0;
+	}
+}
+
 @media only screen and (max-width: 599px) {
 	.sidebar {
 		width: 100px;
@@ -95,5 +184,13 @@
 
 	.doodle {
 		width: 60px;
+	}
+
+	.nav-link {
+		font-size: 16px;
+	}
+
+	.story-container {
+		padding: 20px;
 	}
 }
