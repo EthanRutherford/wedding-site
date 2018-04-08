@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title>Gallery | Ethan and Raquel's Wedding</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="/images/r.ico" />
+		<link rel="stylesheet" href="https://use.typekit.net/shl6wlf.css" />
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body class="page">
+		<div class="sidebar">
+			<div class="nav">
+				<img class="doodle" src="./images/doodle.png" />
+				<a class="nav-link" href="/">Home</a>
+				<a class="nav-link" href="/story">Our Story</a>
+				<a class="nav-link" href="http://registry.rutherford.site">Registry</a>
+				<a class="nav-link" href="/rsvp">RSVP</a>
+				<a class="nav-link" href="/gallery">Gallery</a>
+				<a class="nav-link" href="mailto:ethanrutherford2@gmail.com,redquitobud@gmail.com">Contact</a>
+			</div>
+			<div class="social">
+				<a class="social-link" href="https://www.facebook.com/raquel.dottle">
+					<img src="/images/facebook.svg" />
+				</a>
+				<a class="social-link" href="https://www.twitter.com/Highness_Ellie">
+					<img src="/images/twitter.svg" />
+				</a>
+				<a class="social-link" href="https://www.instagram.com/ellietheadorable">
+					<img src="/images/instagram.svg" />
+				</a>
+			</div>
+		</div>
+		<div class="main-content gallery">
+			<div class="gallery-list">
+				<div class="gallery-title">
+					Gallery
+				</div>
+				<div class="gallery-blurb">
+					All of our pictures! Click on the right for full resolution.
+					<br />
+					Huge shoutout to our photographer, Kassie Kim (@sonoshukunannphotography).
+				</div>
+				<div class="gallery-images">
+					<div class="gallery-column">
+						<img class="fade-in list-image" src="/images/engagement/1-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/2-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/3-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/4-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/5-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/6-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/7-small.jpg" />
+					</div>
+					<div class="gallery-column">
+						<img class="fade-in list-image" src="/images/engagement/8-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/9-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/10-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/11-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/12-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/13-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/14-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/15-small.jpg" />
+						<img class="fade-in list-image" src="/images/engagement/16-small.jpg" />
+					</div>
+				</div>
+			</div>
+			<div class="gallery-view">
+				<img class="fade-in full-image" src="/images/engagement/1.jpg" />
+			</div>
+		</div>
+		<script>
+			function setView(event) {
+				const view = document.querySelector(".gallery-view img");
+				view.src = event.target.src.replace("-small", "");
+			}
+
+			for (const image of document.querySelectorAll(".fade-in")) {
+				if (image.complete) {
+					image.classList.add("loaded");
+				} else {
+					image.onload = () => {
+						image.classList.add("loaded");
+					};
+				}
+				image.onclick = setView;
+			}
+		</script>
+	</body>
+</html>
