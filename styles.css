@@ -259,7 +259,9 @@
 
 .view-full>a {
 	display: block;
+	margin: auto;
 	padding: 10px;
+	width: 120px;
 	color: white;
 	text-decoration: none;
 }
