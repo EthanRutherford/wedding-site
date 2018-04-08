@@ -17,6 +17,7 @@
 	flex-shrink: 0;
 	padding: 40px;
 	width: 250px;
+	max-width: 30%;
 	background-color: #1c3061;
 	overflow: auto;
 }
