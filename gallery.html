@@ -82,7 +82,7 @@
 				const view = document.querySelector(".gallery-view");
 				const curImg = view.querySelector(".full-image:last-of-type");
 				const link = view.querySelector(".view-full a");
-				const mod = document.body.clientWidth < 600 ? "-small" : "";
+				const mod = document.body.clientWidth < 900 ? "-small" : "";
 
 				const src = `/images/engagement/${number}${mod}.jpg`;
 				link.href = `/images/engagement/${number}.jpg`;
@@ -99,6 +99,7 @@
 				const newImg = document.createElement("img");
 				newImg.className = "fade-in full-image";
 				newImg.src = src;
+				curImg.style.filter = "blur(10px)";
 				view.appendChild(newImg);
 				view.offsetWidth;
 

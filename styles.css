@@ -68,7 +68,7 @@
 .fade-in {
 	object-fit: cover;
 	opacity: 0;
-	transition: opacity .5s ease-in-out;
+	transition: opacity .5s ease-in-out, filter .5s;
 }
 
 .loaded {
