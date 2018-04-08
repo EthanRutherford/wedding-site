@@ -272,6 +272,7 @@
 
 	.gallery-title {
 		font-size: 40px;
+		padding: 20px;
 	}
 
 	.gallery-blurb, .gallery-images {
@@ -279,7 +280,7 @@
 	}
 
 	.gallery-view {
-		height: calc(100% - 128px);
+		height: calc(100% - 88px);
 	}
 }
 
@@ -303,13 +304,5 @@
 
 	.header-overlay {
 		max-width: calc(100% - 40px);
-	}
-
-	.gallery-title {
-		padding: 20px;
-	}
-
-	.gallery-view {
-		height: calc(100% - 88px);
 	}
 }
