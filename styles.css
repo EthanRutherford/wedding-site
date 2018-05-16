@@ -277,6 +277,89 @@
 	opacity: 1;
 }
 
+.faq {
+	padding: 40px;
+	background-color: white;
+	columns: 320px;
+	column-gap: 20px;
+	min-height: 100%;
+}
+
+.faq-card, .faq-title-card {
+	page-break-inside: avoid;
+	margin-bottom: 20px;
+}
+
+.faq-title-card {
+	color: #1c3061;
+	font: 20px "cronos-pro";
+}
+
+.faq-card {
+	padding: 30px;
+	font: 16px "cronos-pro";
+}
+
+.faq-card a {
+	color: white;
+}
+
+.faq-card:nth-child(even) {
+	background-color: #6676B2;
+}
+
+.faq-card:nth-child(odd) {
+	background-color: #1c3061;
+}
+
+.faq-title-card .faq-title {
+	font: 50px "adage-script-jf", cursive;
+	margin-bottom: 20px;
+}
+
+.faq-card .faq-title {
+	font-size: 25px;
+	margin-bottom: 10px;
+}
+
+.location {
+	display: flex;
+	padding: 40px;
+	background-color: white;
+	height: 100%;
+	color: #1c3061;
+}
+
+.loc-title {
+	font: 50px "adage-script-jf", cursive;
+}
+
+.loc-left {
+	display: flex;
+	flex-direction: column;
+	width: calc(40% - 20px);
+	height: 100%;
+	margin-right: 40px;
+}
+
+.loc-right {
+	display: flex;
+	flex-direction: column;
+	width: calc(60% - 20px);
+	height: 100%;
+}
+
+.loc-frame, .loc-blurb {
+	flex: 1 1 0;
+	width: 100%;
+	transition: flex-grow .2s;
+	font-size: 20px;
+}
+
+.loc-frame:hover {
+	flex-grow: 2;
+}
+
 @media only screen and (max-width: 1199px) {
 	.our-story {
 		font-size: 40px;
@@ -317,6 +400,29 @@
 	.gallery-view {
 		height: calc(100% - 94px);
 	}
+
+	.location {
+		display: block;
+		height: unset;
+	}
+	
+	.loc-title {
+		font-size: 40px;
+	}
+
+	.loc-left, .loc-right {
+		display: block;
+		width: 100%;
+		height: unset;
+	}
+
+	.loc-frame {
+		height: 40vw;
+	}
+
+	.loc-frame, .loc-blurb {
+		margin-bottom: 20px;
+	}
 }
 
 @media only screen and (max-width: 599px) {
@@ -339,5 +445,17 @@
 
 	.header-overlay {
 		max-width: calc(100% - 40px);
+	}
+
+	.faq {
+		padding: 20px;
+	}
+
+	.faq-card, .faq-title-card {
+		padding: 10px;
+	}
+
+	.location {
+		padding: 20px;
 	}
 }
