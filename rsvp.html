@@ -31,8 +31,25 @@
 				</a>
 			</div>
 		</div>
-		<div class="main-content rsvp">
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSecWtZyuzI9Zsze_J7PGHnih3EC39zWNay4NHDuktSo720YYQ/viewform?embedded=true">Loading...</iframe>
+		<div class="main-content">
+			<img class="fade-in full-image" src="./images/rsvp.jpg" />
+			<div class="content-overlay">
+				<h1 class="title">We're sorry</h1>
+				<div>RSVPs for the wedding are now closed.</div>
+				<div>Thank you for your responses.</div>
+				<div>Be sure to tune-in to our <a href="https://www.youtube.com/watch?v=u52A0JKvU0Y">wedding livestream</a>!</div>
+			</div>
 		</div>
+		<script>
+				for (const image of document.querySelectorAll(".fade-in")) {
+					if (image.complete) {
+						image.classList.add("loaded");
+					} else {
+						image.onload = () => {
+							image.classList.add("loaded");
+						};
+					}
+				}
+			</script>
 	</body>
 </html>
